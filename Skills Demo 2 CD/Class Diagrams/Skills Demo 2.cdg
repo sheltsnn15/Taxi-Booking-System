@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Skills Demo 2">
+  <ClassDiagramComponents>
+    <Class name="Person" package="" visibility="public" xPosition="658.0" yPosition="5.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="phoneNum" type="String" visibility="private"/>
+        <Field name="address" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="menu" returnType="int" visibility="public"/>
+        <Method name="isDouble" returnType="bool" visibility="public"/>
+        <Method name="checkMenu" returnType="bool" visibility="public"/>
+        <Method name="displayWelcome" returnType="void" visibility="public"/>
+        <Method name="printSeperator" returnType="void" visibility="public"/>
+        <Method name="printVehicleDriverHeadings" returnType="void" visibility="public"/>
+        <Method name="slightPause" returnType="void" visibility="public"/>
+        <Method name="printHeading" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="" visibility="public" xPosition="322.0" yPosition="148.0">
+      <Fields>
+        <Field name="destination" type="String" visibility="private"/>
+        <Field name="travelerNum" type="int" visibility="private"/>
+        <Field name="wheelChairNum" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="arrangeFare" returnType="void" visibility="public"/>
+        <Method name="checkArrayEmpty" returnType="bool" visibility="public"/>
+        <Method name="printCustomerDetails" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vehicle" package="" visibility="public" xPosition="63.0" yPosition="258.0">
+      <Fields>
+        <Field name="registrationNum" type="String" visibility="private"/>
+        <Field name="make" type="String" visibility="private"/>
+        <Field name="mileage" type="double" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="capacity" type="int" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="wheelChair" type="bool" visibility="private"/>
+        <Field name="isAvailable" type="bool" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="printVehicleDetails" returnType="void" visibility="public"/>
+        <Method name="wheelChairAccessible" returnType="bool" visibility="public"/>
+        <Method name="checkVehicleAvailable" returnType="bool" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Drivers" package="" visibility="public" xPosition="988.0" yPosition="24.0">
+      <Fields>
+        <Field name="idNum" type="String" visibility="private"/>
+        <Field name="kmDriven" type="double" visibility="private"/>
+        <Field name="startDate" type="String" visibility="private"/>
+        <Field name="licenseType" type="String" visibility="private"/>
+        <Field name="isAvailable" type="bool" visibility="private"/>
+        <Field name="driverTotalRevenue" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="printDriversDetails" returnType="void" visibility="public"/>
+        <Method name="checkDriverAvailable" returnType="bool" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Fare" package="" visibility="public" xPosition="717.0" yPosition="421.0">
+      <Fields>
+        <Field name="cost" type="double" visibility="private"/>
+        <Field name="calloutCharge" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcFare" returnType="void" visibility="public"/>
+        <Method name="viewActiveFares" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Report" package="" visibility="public" xPosition="63.0" yPosition="39.0">
+      <Fields>
+        <Field name="totalRevenue" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="displayRevenue" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Fare" target="Customer"/>
+    <IsRelation name="is" source="Vehicle" target="Fare"/>
+    <IsRelation name="is" source="Drivers" target="Person"/>
+    <IsRelation name="is" source="Customer" target="Person"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
